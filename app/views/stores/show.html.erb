@@ -14,4 +14,19 @@
     <h2 class="text-4xl"> Your Products </h2>
     <%= link_to "Create new product", new_store_product_path(@store), class: "btn btn-primary" %>
   </div>
+
+  <div class="w-full grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8"> 
+    <% @store.products.each do |product| %>
+      <div class="card w-full bg-base-100 card-sm shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title"><%= product.name %></h2>
+          <p> <%= product.description.first(100) %> </p>
+          <%= image_tag(product.images.first, class: "w-24") if product.images.any? %>
+          <div class="justify-end card-actions">
+            <%= link_to "View product", [@store, product], class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
