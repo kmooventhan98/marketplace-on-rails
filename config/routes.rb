@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :stores
-  resource :registrations, only: [:new, :create]
+  resource :registrations, only: [ :new, :create ]
   resource :session
   resources :passwords, param: :token
-  
-  resource :dashboard, only: [:show], controller: :dashboard
+
+  resource :dashboard, only: [ :show ], controller: :dashboard
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
