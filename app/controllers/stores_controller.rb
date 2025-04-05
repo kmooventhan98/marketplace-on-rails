@@ -65,6 +65,6 @@ class StoresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def store_params
-      params.expect(store: [ :name ])
+      params.expect(store: [ :name, :description, :banner_image ])
     end
 end
