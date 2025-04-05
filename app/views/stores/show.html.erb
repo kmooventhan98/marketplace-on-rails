@@ -9,4 +9,9 @@
   <p class="text-xl mt-4"> <%= @store.description %> </p>
 
   <%= image_tag(@store.banner_image, class: "w-full h-64 object-cover mt-4") if @store.banner_image.attached? %>
+
+  <div class="flex items-center justify-between w-full mt-8">
+    <h2 class="text-4xl"> Your Products </h2>
+    <%= link_to "Create new product", new_store_product_path(@store), class: "btn btn-primary" %>
+  </div>
 </div>

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :stores
+  resources :stores do
+    scope module: :stores do
+      resources :products
+    end
+  end
+
   resource :registrations, only: [ :new, :create ]
   resource :session
   resources :passwords, param: :token
