@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "./daisyui.js";
 
 @theme {
   --font-default: "Exo", "sans-sarif";

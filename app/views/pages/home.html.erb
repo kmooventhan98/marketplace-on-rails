@@ -4,4 +4,9 @@
     <%= image_tag "rails_logo.png", class: "h-36 object-cover" %>
   </h1>
   <p class="mt-4 text-xl">A marketplace app built with Ruby on Rails. And by open source contributors on a live stream </p>
+
+  <div class="w-full flex items-center justify-center gap-4 mt-4"> 
+    <%= link_to "Sign in", new_session_path, class: "btn btn-primary" %>
+    <%= link_to "Create account", new_registrations_path, class: "btn btn-secondary" %>
+  </div>
 </div>
